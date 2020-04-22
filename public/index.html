@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    .file-item {
+      font-size: 14px;
+      color: #666;
+      list-style: none;
+    }
+    .file-item .list {
+      padding: 4px 0;
+    }
+  </style>
+  <body>
+    <ul class="file-item">
+      <% fileList.forEach(item => {%>
+      <li class="list"><a href="<%=item.path%>"><%=item.name%></a></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

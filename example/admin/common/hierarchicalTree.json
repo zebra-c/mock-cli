@@ -1,0 +1,57 @@
+{
+  "code": 200,
+  "rows": {
+    "list": [
+      {
+        "No": "4",
+        "callratio": 0,
+        "counts": "120",
+        "created_at": "2019-04-09 11:26:25",
+        "file_origin_name": "bee普通邀约文件.xlsx",
+        "hasdelivers": 0,
+        "list_id": "52",
+        "successratio": 0,
+        "task_name": "bee普通邀约文",
+        "task_type_name": "普通邀约"
+      },
+      {
+        "No": "3",
+        "callratio": "0.0%",
+        "counts": "3331",
+        "created_at": "2019-02-22 13:47:13",
+        "file_origin_name": "bee售后文件2.xlsx",
+        "hasdelivers": 20,
+        "list_id": "17",
+        "successratio": 0,
+        "task_name": "bee售后文件2",
+        "task_type_name": "售后"
+      },
+      {
+        "No": "2",
+        "callratio": "0.0%",
+        "counts": "3338",
+        "created_at": "2019-02-22 13:46:57",
+        "file_origin_name": "bee销售文件.xlsx",
+        "hasdelivers": 2,
+        "list_id": "16",
+        "successratio": 0,
+        "task_name": "bee销售文件",
+        "task_type_name": "销售"
+      },
+      {
+        "No": "1",
+        "callratio": 0,
+        "counts": "3338",
+        "created_at": "2019-02-22 13:46:08",
+        "file_origin_name": "bee售后文件.xlsx",
+        "hasdelivers": 0,
+        "list_id": "15",
+        "successratio": 0,
+        "task_name": "bee文件bee文件bee",
+        "task_type_name": "普通邀约"
+      }
+    ],
+    "total": 4
+  },
+  "success": true
+}

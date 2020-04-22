@@ -1,0 +1,33 @@
+{
+  "name": "@zebra-c/mock-cli",
+  "version": "1.0.0",
+  "description": "zebra-c mock cli",
+  "main": "./src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "mock-cli": "./bin/www"
+  },
+  "scripts": {
+    "mock": "nodemon ./src/index --watch ./example --port 3000 --dir ./mock",
+    "start": "nodemon mock-cli",
+    "dev": "nodemon mock-cli --port 3000 --dir ./example",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zebra-c",
+    "mock",
+    "mock-cli"
+  ],
+  "author": "zebra-c",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.3",
+    "chalk": "^4.0.0",
+    "commander": "^5.0.0",
+    "ejs": "^3.0.2",
+    "mime": "^2.4.4",
+    "zlib": "^1.0.5"
+  }
+}

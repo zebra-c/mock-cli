@@ -10,7 +10,7 @@
     "mock-cli": "./bin/www"
   },
   "scripts": {
-    "mock": "nodemon ./src/index --watch ./example --port 3000 --dir ./mock",
+    "mock": "nodemon ./src/index --watch ./example --port 3000 --dir /example",
     "start": "nodemon mock-cli",
     "dev": "nodemon mock-cli --port 3000 --dir ./example",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,11 +23,12 @@
   "author": "zebra-c",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^2.0.3",
     "chalk": "^4.0.0",
     "commander": "^5.0.0",
     "ejs": "^3.0.2",
     "mime": "^2.4.4",
+    "nodemon": "^2.0.3",
+    "terminal-link": "^2.1.1",
     "zlib": "^1.0.5"
   }
 }

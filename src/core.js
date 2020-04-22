@@ -8,6 +8,7 @@ const ejs = require("ejs");
 const { promisify } = require("util");
 const mime = require("mime");
 const zlib = require("zlib");
+const terminalLink = require("terminal-link");
 const renderHTMl = promisify(ejs.renderFile);
 const { createReadStream } = require("fs");
 
@@ -22,6 +23,7 @@ class Server {
   constructor(config) {
     this.config = { ...DefaultValue, ...config };
     this.server = http.createServer(this.handlerRequest.bind(this));
+    this.error();
   }
   async handlerRequest(req, res) {
     this.req = req;
@@ -142,15 +144,16 @@ class Server {
   start() {
     const { port } = this.config;
     this.server.listen(port, () => {
-      log(chalk.green(`已成功监听${port}`));
+      log(`  - Local:   ${chalk.cyan(`http://localhost:${this.config.port}`)}`);
     });
   }
   error() {
     this.server.on("error", (err) => {
       if (err.code === "EADDRINUSE") {
         let { port } = this.config;
-        log(chalk.red(`该端口号，已被占用，${port}`));
-        this.server.listen(++port);
+        log(chalk.red(`${port}端口号，已被占用`));
+        ++this.config.port;
+        this.server.listen(this.config.port);
       }
     });
   }
